@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <title>CSS Demo</title>
+    <style>
+        * {
+            font-size: 20px;
+        }
+
+        h1 {
+            color: red;
+        }
+
+        div,
+        span {
+            color: green;
+        }
+
+        #testing-2 {
+            color: aqua;
+        }
+
+        .underlined {
+            text-decoration: underline;
+        }
+
+        .bold-text {
+            font-weight: bold;
+        }
+
+        ul li {
+            color: red;
+        }
+
+        p+a {
+            color: chocolate;
+        }
+
+        .city>li>ul>li {
+            color: blue;
+        }
+
+        button:hover {
+            background-color: red;
+        }
+
+        input[type="checkbox"]:checked {
+            background-color: blue;
+        }
+
+        input[type="text"]:focus {
+            color: blue;
+        }
+
+        .p-langs li:last-child {
+            font-size: 40px;
+        }
+
+        #not-demo p:not(.land) {
+            color: red;
+        }
+
+        p::selection {
+            background-color: blue;
+            color: gold;
+        }
+
+        #first-letter-demo::first-letter {
+            font-size: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>CSS Demo</h1>
+    <p>testing</p>
+    <span>testing span</span>
+    <div id="testing-2">testing 2</div>
+    <div class="underlined bold-text">testing 4</div>
+    <div class="underlined">testing 5</div>
+    <a href="">Wiki</a>
+    <div class="">testing 6</div>
+
+    <hr>
+
+    <ul class="p-langs">
+        <li>PHP</li>
+        <li>Python</li>
+        <li>C++</li>
+    </ul>
+
+    <ol>
+        <li>Arabic</li>
+        <li>English</li>
+        <li>French</li>
+    </ol>
+
+    <hr>
+
+    <!-- p+a {
+        color: chocolate;
+    } -->
+
+    <div>
+        <p>before MDN</p>
+        <a href="">MDN</a>
+        <p id="first-letter-demo">been the industry's standard dummy text ever since the 1500s, when an unknown prin s
+            been the industry's
+            standard dummy text ever since the 1500s, when an unknown prin s been the industry's standard dummy text
+            ever since the 1500s, when an unknown prin</p>
+        <a href="#">Google</a>
+        <p>s been the industry's standard dummy text ever since the 1500s, when an unknown prin</p>
+        <a href="">W3schools</a>
+        <p>s been the industry's standard dummy text ever since the 1500s, when an unknown prin</p>
+        <a href="">bestbuy</a>
+        <a href="">amazon</a>
+    </div>
+
+    <div>
+        <p>testing from out of the div</p>
+        <a href="">htu</a>
+    </div>
+
+    <div>
+        <a href="">htu</a>
+        <p>testing from out of the div</p>
+    </div>
+
+    <hr>
+
+    <!-- direct child -->
+
+    <ul class="city">
+        <li>test1</li>
+        <li>test2</li>
+        <li>
+            test 3
+            <ul>
+                <li>nest test 1</li>
+                <li>nest test 2</li>
+            </ul>
+        </li>
+    </ul>
+
+    <button>Hover Me!</button>
+
+    <form action="">
+        <input type="checkbox">
+        <div>
+            <input type="text">
+        </div>
+    </form>
+
+    <div id="not-demo">
+        <p>jlkasjdf lajsd flsdf</p>
+        <p class="land">jlkasjdf lajsd flsdf</p>
+        <p>jlkasjdf lajsd flsdf</p>
+    </div>
+
+</body>
+
+</html>

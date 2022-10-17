@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Specifity Demo</title>
+    <style>
+        body {
+            font-size: 20px;
+        }
+
+        #id1 {
+            color: chocolate;
+        }
+
+        #id2 {
+            color: rebeccapurple;
+        }
+
+        .khawa {
+            color: rebeccapurple !important;
+        }
+
+        .c1 {
+            color: rgb(34, 90, 90);
+        }
+
+        p {
+            color: green;
+        }
+
+        p {
+            color: red;
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>CSS</h1>
+    <div id="testing" style="font-size: 30px;">
+        <p id="id1" class="c1">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
+            has been
+            the
+            industry's standard dummy text ever since the 1500s, when an unk</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iste eius labore at quaerat, aut illo et harum
+            repellat? Tenetur odio atque ipsa obcaecati aperiam! Quam aperiam porro hic quae suscipit.</p>
+        <p class="c1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores eaque quaerat modi asperiores,
+            culpa sed ex
+            harum doloribus quos ut doloremque! Officia eos aliquid atque deleniti eligendi voluptates consequuntur
+            culpa?</p>
+
+        <p id="id2" class="c1" style="color: darkgoldenrod;">Lorem Ipsum is simply dummy text of the printing and
+            typesetting industry. Lorem Ipsum
+            has been
+            the
+            industry's standard dummy text ever since the 1500s, when an unk</p>
+        <p id="id3" class="khawa" style="color: darkgoldenrod;">Lorem Ipsum is simply dummy text of the printing and
+            typesetting industry. Lorem Ipsum
+            has been
+            the
+            industry's standard dummy text ever since the 1500s, when an unk</p>
+    </div>
+</body>
+
+</html>

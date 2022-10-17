@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Forms Demo</title>
+</head>
+
+<body>
+    <form action="/user_validation.php" method="GET">
+        <div>
+            <label for="web_username">Username</label>
+            <input id="web_username" type="text" name="uname" placeholder="bestephan">
+        </div>
+        <div>
+            <label for="web_password">Password</label>
+            <input id="web_password" type="password" name="pass">
+        </div>
+
+        <!-- checkbox -->
+        <div>
+            <label for="web_checkbox">I agree that I want to receive emails from you. </label>
+            <input id="web_checkbox" type="checkbox" name="cb">
+        </div>
+
+        <!-- radio -->
+        <div>
+            <p>What is your gender?</p>
+            <div>
+                <label for="web_radio_male">Male</label>
+                <input id="web_radio_male" type="radio" name="gender" value="male">
+            </div>
+            <div>
+                <label for="web_radio_female">Female</label>
+                <input id="web_radio_female" type="radio" name="gender" value="female">
+            </div>
+        </div>
+
+        <!-- select -->
+        <div>
+            <label for="web_select">Select your course</label>
+            <select name="user_course" id="web_select">
+                <option value="php">PHP</option>
+                <option value="python">Python</option>
+                <option value="c++">C++</option>
+            </select>
+        </div>
+
+        <!-- number -->
+        <div>
+            <label for="web_number">enter your age:</label>
+            <input id="web_number" type="number" name="age" min="18" max="40">
+        </div>
+
+        <!-- textarea -->
+        <div>
+            <label for="web_bio">enter you bio:</label>
+            <textarea name="bio" id="web_bio"></textarea>
+        </div>
+
+
+        <button type="submit">Submit form</button>
+    </form>
+</body>
+
+</html>
