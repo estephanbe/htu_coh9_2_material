@@ -1,0 +1,69 @@
+main {
+    margin: 4rem 10rem;
+}
+
+main>h2 {
+    text-align: center;
+    font-size: 2.3rem;
+}
+
+main>hr {
+    width: 50%;
+}
+
+#htu-courses {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 3rem;
+}
+
+.htu-course {
+    width: 17%;
+    margin: 2%;
+    border: 2px solid rgb(160, 150, 150);
+    padding: 1.5%;
+}
+
+.htu-course .htu-course-img-wrapper {
+    display: block;
+    position: relative;
+}
+
+.htu-course .htu-course-price {
+    text-decoration: none;
+    color: black;
+    position: absolute;
+    top: 7%;
+    right: 7%;
+    background-color: #eeee17;
+    padding: 0.4rem;
+    border-radius: 15px;
+}
+
+.htu-course img {
+    width: 100%;
+}
+
+
+.htu-course .htu-course-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #d1d5d7;
+    padding: 0.4rem;
+}
+
+
+.htu-course .htu-course-btn-wrapper {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 2rem;
+}
+
+.htu-course .htu-course-btn-wrapper a {
+    text-decoration: none;
+    color: black;
+    background-color: #9da1a4;
+    padding: 0.7rem;
+    border-radius: 7px;
+}
