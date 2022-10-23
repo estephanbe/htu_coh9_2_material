@@ -1,0 +1,28 @@
+header {
+    height: 60vh;
+}
+
+main {
+    margin: 5rem auto;
+}
+
+main>form {
+    width: 30%;
+    margin: auto;
+    font-size: 1.3rem;
+}
+
+main>form>div {
+    margin-bottom: 1rem;
+}
+
+main>form label {
+    display: block;
+    margin-bottom: .3rem;
+}
+
+main>form input,
+main>form textarea {
+    font-size: 1.1rem;
+    width: 100%;
+}

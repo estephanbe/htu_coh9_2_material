@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="./assets/css/styles.css">
+    <link rel="stylesheet" href="./assets/css/header.css">
+    <link rel="stylesheet" href="./assets/css/contact-us.css">
+    <title>HTU Courses</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div id="htu-logo">
+                <a href="./index.html">
+                    <img src="./assets/images/logo.png" alt="HTU Logo">
+                </a>
+            </div>
+            <ul id="htu-menu">
+                <li class="active">
+                    <a href="./index.html">Home</a>
+                </li>
+                <li class="has-sub-menu">
+                    <a href="#">Categories</a>
+                    <ul class="sub-menu">
+                        <li>
+                            <a href="#">Web Development</a>
+                        </li>
+                        <li>
+                            <a href="#">Mobile Development</a>
+                        </li>
+                        <li>
+                            <a href="#">Desktop Development</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="./contact-us.html">Contact Us</a>
+                </li>
+                <li>
+                    <a href="#">About Us</a>
+                </li>
+            </ul>
+        </nav>
+
+        <div id="htu-hero-wrapper">
+            <div id="htu-hero">
+                <h1>Contact Us</h1>
+            </div>
+        </div>
+
+    </header>
+
+    <main>
+        <form action="">
+            <div>
+                <label for="htu-subject">Subject</label>
+                <input type="text" name="subject" id="htu-subject">
+            </div>
+            <div>
+                <label for="htu-email">Email</label>
+                <input type="email" name="email" id="htu-email">
+            </div>
+            <div>
+                <label for="htu-message">Messsage</label>
+                <textarea type="text" name="message" id="htu-message" cols="40" rows="7"></textarea>
+            </div>
+            <button>Send</button>
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2022 All Rights Recevied - HTU</p>
+    </footer>
+
+</body>
+
+</html>

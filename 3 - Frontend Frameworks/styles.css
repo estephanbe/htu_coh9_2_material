@@ -1,0 +1,21 @@
+header {
+    background-image: url("./assets/images/home_bg.jpeg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 80vh;
+}
+
+#htu-hero>div {
+    background-color: #fff;
+}
+
+#htu-hero form button {
+    background-color: transparent;
+    color: black;
+    margin-left: -7%;
+}
+
+.htu-card-wrapper .card {
+    width: 100%;
+}

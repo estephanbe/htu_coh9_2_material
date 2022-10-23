@@ -20,3 +20,37 @@ footer {
 footer p {
     text-align: center;
 }
+
+@media only screen and (max-width: 990px) {
+    #htu-hero-wrapper #htu-hero h1 {
+        font-size: 2rem;
+    }
+
+    #htu-hero-wrapper #htu-hero p {
+        font-size: .7rem;
+    }
+
+    #htu-hero-wrapper #htu-hero #htu-search button {
+        margin-left: -15%;
+    }
+}
+
+@media only screen and (max-width: 850px) {
+    #htu-hero-wrapper #htu-hero h1 {
+        font-size: 1.5rem;
+    }
+}
+
+@media only screen and (min-width: 700px) {
+    #htu-courses .htu-course {
+        width: 35%;
+    }
+
+}
+
+@media only screen and (min-width: 900px) {
+    #htu-courses .htu-course {
+        width: 25%;
+    }
+
+}
