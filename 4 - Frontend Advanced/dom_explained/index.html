@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Explained</title>
+    <style>
+        /* p {
+            color: red;
+        }
+
+        .blue-color {
+            color: blue;
+        }
+
+        #main-header {
+            color: red;
+            background-color: red;
+        } */
+    </style>
+</head>
+
+<body>
+    <p id="main-header" class="blue-color">Hello</p>
+    <p id="secondery-header" class="blue-color">Hello</p>
+    <p>Hello</p>
+    <!-- <img src="https://cdn.pixabay.com/photo/2013/07/12/17/47/test-pattern-152459_960_720.png" alt=""> -->
+
+    <script>
+        let mainHeader = document.getElementById('main-header');
+        let blueColorParagraphs = document.getElementsByClassName('blue-color');
+        let paragraphs = document.getElementsByTagName('p');
+
+        let querySelector = document.querySelector('.blue-color');
+        let querySelectorAll = document.querySelectorAll('.blue-color');
+        let querySelectorAllParagraphs = document.querySelectorAll('p');
+
+        // for (let index = 0; index < querySelectorAllParagraphs.length; index++) {
+        //     console.log("changing paragraph number " + index)
+        //     querySelectorAllParagraphs[index].style.color = 'red';
+        // }
+
+        // document.getElementsByTagName('img')[0].src = "https://miro.medium.com/max/1400/0*i1XbVjul86E_CSyf.jpg"
+
+        // document.getElementById('secondery-header').style.backgroundColor = "red";
+        // document.getElementById('secondery-header').style.fontSize = "1rem";
+
+        // Create elements
+        let newElement = document.createElement('p');
+        newElement.textContent = "This was created using JS, not HTML..";
+        document.getElementsByTagName('body')[0].appendChild(newElement);
+        console.log(newElement)
+
+        // Removing elements
+        document.getElementById('secondery-header').remove();
+    </script>
+</body>
+
+</html>
