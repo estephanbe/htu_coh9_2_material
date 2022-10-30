@@ -26,6 +26,11 @@
     <p id="main-header" class="blue-color">Hello</p>
     <p id="secondery-header" class="blue-color">Hello</p>
     <p>Hello</p>
+
+    <ul id="htu-list">
+
+    </ul>
+
     <!-- <img src="https://cdn.pixabay.com/photo/2013/07/12/17/47/test-pattern-152459_960_720.png" alt=""> -->
 
     <script>
@@ -51,7 +56,15 @@
         let newElement = document.createElement('p');
         newElement.textContent = "This was created using JS, not HTML..";
         document.getElementsByTagName('body')[0].appendChild(newElement);
-        console.log(newElement)
+
+        let htuUl = document.getElementById('htu-list');
+        let ulList = ['Home', 'About Us'];
+
+        for (let index = 0; index < ulList.length; index++) {
+            let newLi = document.createElement('li');
+            newLi.innerHTML = "<a href='#'>" + ulList[index] + "</a>";
+            htuUl.appendChild(newLi);
+        }
 
         // Removing elements
         document.getElementById('secondery-header').remove();
