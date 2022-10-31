@@ -64,13 +64,21 @@ function printScore(player) {
     if (player == 1) {
         // add 1 point to the score
         p1Score++;
+        if (p2Score > 0) {
+            p2Score--;
+        }
         // insert the score to the score section
         p1Points.textContent = p1Score;
+        p2Points.textContent = p2Score;
     } else {
         // add 1 point to the score
         p2Score++;
+        if (p1Score > 0) {
+            p1Score--;
+        }
         // insert the score to the score section
         p2Points.textContent = p2Score;
+        p1Points.textContent = p1Score;
     }
 }
 

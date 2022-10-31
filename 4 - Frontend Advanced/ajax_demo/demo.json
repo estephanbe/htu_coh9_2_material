@@ -1,0 +1,14 @@
+{
+    "name": "khalid",
+    "age": 20,
+    "classes": [
+        "php",
+        "python",
+        "c++"
+    ],
+    "settings": {
+        "font-size": "1.5rem"
+    },
+    "isAdmin": true,
+    "date_of_creation": null
+}
