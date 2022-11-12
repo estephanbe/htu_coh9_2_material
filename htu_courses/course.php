@@ -6,6 +6,11 @@ if (!empty($course_id)) :
     $courses_arr = array_filter($courses, function ($item) use ($course_id) {
         return $item->id == $course_id;
     });
+
+    // $arr = [1, 2, 3, 4, 5, 6];
+    // $filtered_arr = array_filter($arr, function ($num) {
+    //     return $num % 2 == 0;
+    // });
     // foreach ($courses as $course) {
     //     if ($course->id == $course_id) {
     //         $courses_arr[] = $course;
