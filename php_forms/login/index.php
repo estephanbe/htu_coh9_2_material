@@ -1,4 +1,7 @@
-<?php session_start(); ?>
+<?php session_start();
+if (isset($_SESSION['user']))
+    header("Location: ./home.php");
+?>
 <!doctype html>
 <html lang="en">
 
@@ -18,7 +21,9 @@
         <div class="alert alert-danger" role="alert">
             <?= $_SESSION['error'] ?>
         </div>
-    <?php endif; ?>
+    <?php endif;
+    // $_SESSION['error'] = null; // flash msgs
+    ?>
 
     <form class="w-50" method="POST" action="./form_validation.php">
         <div class="mb-3">
