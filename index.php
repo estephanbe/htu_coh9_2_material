@@ -1,17 +1,5 @@
 <?php
-$lessons = array(
-    array(
-        'title' => "PHP Demo",
-        'description' => "demo about php syntax",
-        'link' => './php_demo'
-    ),
-    array(
-        'title' => "PHP Forms",
-        'description' => "explain how to handle forms in PHP",
-        'link' => './php_forms'
-    )
-);
-
+require_once './constants.php';
 ?>
 
 <!doctype html>
@@ -31,7 +19,7 @@ $lessons = array(
 
     <div class="row">
 
-        <?php foreach ($lessons as $lesson) : ?>
+        <?php foreach (LESSONS as $lesson) : ?>
             <div class="card-wrapper col-3 mb-5">
                 <div class="card" style="width: 100%;">
                     <div class="card-body">
