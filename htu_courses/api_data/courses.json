@@ -2,8 +2,8 @@
     {
         "id": 1,
         "title": "Fullstack development",
-        "excerpt": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ex dicta aut expli",
-        "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ex dicta aut explicabo error perferendis possimus asperiores, repudiandae fugit minima sed porro ipsa quisquam rerum autem similique officiis. Tenetur, sint quos. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ex dicta aut explicabo error perferendis possimus asperiores, repudiandae fugit minima sed porro ipsa quisquam rerum autem similique officiis. Tenetur, sint quos.",
+        "excerpt": "Lorem  ipsum dolor sit amet consectetur, adipisicing elit. Ex dicta aut expli",
+        "description": "Lorem test ipsum dolor sit amet consectetur, adipisicing elit. Ex dicta aut explicabo error perferendis possimus asperiores, repudiandae fugit minima sed porro ipsa quisquam rerum autem similique officiis. Tenetur, sint quos. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ex dicta aut explicabo error perferendis possimus asperiores, repudiandae fugit minima sed porro ipsa quisquam rerum autem similique officiis. Tenetur, sint quos.",
         "featured": 1
     },
     {
@@ -17,7 +17,7 @@
         "id": 3,
         "title": "Fullstack development3",
         "excerpt": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ex dicta aut expli",
-        "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ex dicta aut explicabo error perferendis possimus asperiores, repudiandae fugit minima sed porro ipsa quisquam rerum autem similique officiis. Tenetur, sint quos. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ex dicta aut explicabo error perferendis possimus asperiores, repudiandae fugit minima sed porro ipsa quisquam rerum autem similique officiis. Tenetur, sint quos.",
+        "description": "Lorem ipsum dolor sit amet hi consectetur, adipisicing elit. Ex dicta aut explicabo error perferendis possimus asperiores, repudiandae fugit minima sed porro ipsa quisquam rerum autem similique officiis. Tenetur, sint quos. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ex dicta aut explicabo error perferendis possimus asperiores, repudiandae fugit minima sed porro ipsa quisquam rerum autem similique officiis. Tenetur, sint quos.",
         "featured": 1
     },
     {
@@ -95,6 +95,27 @@
         "title": "Fullstack development14",
         "excerpt": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ex dicta aut expli",
         "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ex dicta aut explicabo error perferendis possimus asperiores, repudiandae fugit minima sed porro ipsa quisquam rerum autem similique officiis. Tenetur, sint quos. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ex dicta aut explicabo error perferendis possimus asperiores, repudiandae fugit minima sed porro ipsa quisquam rerum autem similique officiis. Tenetur, sint quos.",
+        "featured": 1
+    },
+    {
+        "id": 15,
+        "title": "Veniam sit debitis ",
+        "excerpt": "Vel dolor sint sed a",
+        "description": "Error ut eiusmod ipslj kjasdh fasldfj aslfdj klsadj flksajfdljsadf",
+        "featured": 1
+    },
+    {
+        "id": 16,
+        "title": "Voluptates qui qui n 2",
+        "excerpt": "A et cupidatat et sa",
+        "description": "Id sit molestias qui jasdlfk aslkdfj klasj dfljaslfkj saf",
+        "featured": 0
+    },
+    {
+        "id": 17,
+        "title": "Placeat fugiat ipsu",
+        "excerpt": "Deserunt totam nulla",
+        "description": "Repudiandae ad molli",
         "featured": 1
     }
 ]
