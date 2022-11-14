@@ -14,5 +14,10 @@ define('LESSONS', $lessons = array(
         'title' => "HTU Courses",
         'description' => "Same website for HTU Courses but with backend support.",
         'link' => './htu_courses'
+    ),
+    array(
+        'title' => "Animals API PHP",
+        'description' => "Collect information from an api using PHP.",
+        'link' => './animals_api_php'
     )
 ));
