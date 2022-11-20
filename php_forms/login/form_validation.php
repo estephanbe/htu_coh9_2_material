@@ -3,7 +3,7 @@ session_start();
 
 // username length must be between 5 and 10 chars.
 
-if ($_SERVER['REQUEST_METHOD'] != 'POST' && empty($_POST))
+if ($_SERVER['REQUEST_METHOD'] != 'POST' || empty($_POST))
     die('You are someone not ethical trying to access our code directly!');
 
 $_SESSION['error'] = null;

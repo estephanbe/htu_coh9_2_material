@@ -1,6 +1,6 @@
 <?php
 session_start();
-include '../includes/functions.php';
+include '../functions.php';
 
 if ($_SERVER['REQUEST_METHOD'] != 'POST' || empty($_POST))
     die('You are someone a bad guy trying to access our code directly!');
@@ -17,20 +17,15 @@ $error_msg = '';
 
 if (!empty($email) && !empty($password)) {
 
-    $users = file_get_contents('../local_data/users.json');
-    $users = json_decode($users);
+    $connection = connect();
+    $sql = "SELECT * FROM users WHERE email='$email'";
+    $result = mysqli_query($connection, $sql);
+    var_dump($result);
+    $user = mysqli_fetch_object($result);
+    mysqli_close($connection);
 
-    $valid_user;
-
-    foreach ($users as $user) {
-        if ($user->email == $email) {
-            $valid_user = $user;
-            break;
-        }
-    }
-
-    if (!empty($valid_user)) {
-        if ($password != $valid_user->password) {
+    if (!empty($user)) {
+        if ($user->password != $password) {
             $error = true;
             $error_msg = 'Incorrect email or password';
         }
@@ -40,15 +35,17 @@ if (!empty($email) && !empty($password)) {
     }
 } else {
     $error = true;
-    $error_msg = 'You need to enter some information';
+    $error_msg = 'You need to enter all the information';
 }
 
 if ($error) {
     $_SESSION['error'] = $error_msg;
-    anp_redirect('../');
+    ts_redirect('../user_registration.php');
 } else {
     $_SESSION['user'] = array(
-        'display_name' => $valid_user->display_name
+        'display_name' => $user->display_name,
+        'is_admin' => (bool) $user->is_admin,
+        'user_id' => (int) $user->id
     );
-    anp_redirect('../home.php');
+    ts_redirect('../home.php');
 }

@@ -1,5 +1,5 @@
 <?php
-if ($_SERVER['REQUEST_METHOD'] != 'POST' && empty($_POST))
+if ($_SERVER['REQUEST_METHOD'] != 'POST' || empty($_POST))
     die('You are someone a bad guy trying to access our code directly!');
 
 $fname = isset($_POST['fname']) ? $_POST['fname'] : null;

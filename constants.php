@@ -29,5 +29,10 @@ define("LESSONS", array( // this is indexed array
         "title" => "MySQL - Customers",
         'description' => 'Simple CRM',
         'link' => './crm/'
+    ),
+    array(
+        "title" => "Ticketing System",
+        'description' => 'Simple PHP ticketing system to handle seats reservations',
+        'link' => './ticketing_system/'
     )
 ));
