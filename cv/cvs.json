@@ -1,0 +1,31 @@
+[
+    {
+        "id": 1,
+        "fname": "Rudyard",
+        "lname": "Leonard",
+        "dob": "Placeat eius perspi",
+        "phone": "+1 (827) 905-3894",
+        "email": "fivu@mailinator.com",
+        "address": "Omnis porro ipsum ne",
+        "objective": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.\r\n\r\n",
+        "institute": [
+            "Magna ratione consec",
+            "Explicabo Non deser"
+        ],
+        "gdate": [
+            "2020-01-16",
+            "1996-03-18"
+        ],
+        "company": [
+            "Guerra and Bond Trading",
+            "Oneal and Stevens Inc",
+            "Hampton Fleming LLC"
+        ],
+        "sdate": [
+            "1995-02-02",
+            "1995-05-14",
+            "1972-07-18"
+        ],
+        "photo": "cv-1.jpeg"
+    }
+]

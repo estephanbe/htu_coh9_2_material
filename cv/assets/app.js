@@ -21,6 +21,7 @@ $(function () {
             $('form').submit();
         }
 
+        $(`.cv-info-${currentDiv} *`).hide(800);
         $(`.cv-info-${currentDiv}`).animate({ //1
             width: 0,
             opacity: 0
@@ -50,6 +51,7 @@ $(function () {
             opacity: 0
         }, 1000, function () {
             $(`.cv-info-${currentDiv--}`).hide();
+            $(`.cv-info-${currentDiv} *`).show();
             $(`.cv-info-${currentDiv}`).show();
             $(`.cv-info-${currentDiv}`).animate({ //2
                 width: '100%',
