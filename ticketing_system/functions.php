@@ -80,3 +80,27 @@ function get_seats()
 
     return $seats;
 }
+
+function get_seat($id)
+{
+    $connection = connect();
+    $sql = "SELECT * FROM seats WHERE id=$id";
+    $result = mysqli_query($connection, $sql);
+
+    mysqli_close($connection);
+
+    return mysqli_fetch_object($result);
+}
+
+function update_seat_reservation($id, $status, $user_id)
+{
+    $connection = connect();
+    $user_id = !empty($user_id) ? $user_id : "NULL";
+    $sql = <<<EOD
+    UPDATE seats
+        SET is_available=$status, user_id=$user_id
+        WHERE id=$id
+    EOD;
+    mysqli_query($connection, $sql);
+    mysqli_close($connection);
+}

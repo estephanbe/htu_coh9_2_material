@@ -3,6 +3,12 @@
 
     color: #fff;
     font-size: 3rem;
+    text-decoration: none;
+}
+
+.ts-seat:hover {
+    color: #fff;
+    opacity: .9;
 }
 
 .available_seat {
