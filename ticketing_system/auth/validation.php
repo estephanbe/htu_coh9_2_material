@@ -40,7 +40,7 @@ if (!empty($email) && !empty($password)) {
 
 if ($error) {
     $_SESSION['error'] = $error_msg;
-    ts_redirect('../user_registration.php');
+    ts_redirect('../');
 } else {
     $_SESSION['user'] = array(
         'display_name' => $user->display_name,
