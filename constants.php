@@ -34,5 +34,10 @@ define("LESSONS", array( // this is indexed array
         "title" => "Ticketing System",
         'description' => 'Simple PHP ticketing system to handle seats reservations',
         'link' => './ticketing_system/'
+    ),
+    array(
+        "title" => "OOP Basics",
+        'description' => 'OOP basic concepts',
+        'link' => './oop_basics/'
     )
 ));
