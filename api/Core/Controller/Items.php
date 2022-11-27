@@ -11,6 +11,7 @@ class Items
 {
     protected $db;
     protected $http_code = 200;
+    protected $request_body;
 
     protected $response_schema = array(
         "success" => true, // to privde the response status
@@ -18,10 +19,21 @@ class Items
         "body" => array()
     );
 
-
     public function __construct()
     {
         $this->db = new DB();
+        $this->request_body = json_decode(file_get_contents("php://input", true));
+
+        // error handling demo
+        // $user_logged_in = false;
+        // try {
+        //     if ($user_logged_in == false) {
+        //         // this is an error
+        //         throw new \Exception("User is not logged in");
+        //     }
+        // } catch (\Exception $error) {
+        //     echo $error->xdebug_message;
+        // }
     }
 
     public function render()
@@ -34,16 +46,28 @@ class Items
     public function index(): void
     {
         $items = array();
-        $result = $this->db->submit_query("SELECT * FROM items");
+        try {
+            $result = $this->db->submit_query("SELECT * FROM items");
 
-        if ($result->num_rows > 0) {
+            if (!$result) {
+                $this->http_code = 500;
+                throw new \Exception("server_error");
+            }
+
+            if ($result->num_rows == 0) {
+                $this->http_code = 404;
+                throw new \Exception("items_not_found");
+            }
+
             while ($row = $result->fetch_object()) {
                 $items[] = $row;
             }
+            $this->response_schema['body'] = $items;
+            $this->response_schema['message_code'] = "items_collected";
+        } catch (\Exception $error) {
+            $this->response_schema['success'] = false;
+            $this->response_schema['message_code'] = $error->getMessage();
         }
-
-        $this->response_schema['body'] = $items;
-        $this->response_schema['message_code'] = "items_collected";
     }
 
     public function single()
@@ -57,6 +81,23 @@ class Items
      */
     public function create()
     {
+
+        try {
+            if (!isset($this->request_body->name)) {
+                $this->http_code = 422;
+                throw new \Exception('name_param_not_found');
+            }
+
+            if (!$this->db->submit_query("INSERT INTO items (name) VALUES ('{$this->request_body->name}')")) {
+                $this->http_code = 500;
+                throw new \Exception('server_error');
+            }
+
+            $this->response_schema['message_code'] = "item_created";
+        } catch (\Exception $error) {
+            $this->response_schema['success'] = false;
+            $this->response_schema['message_code'] = $error->getMessage();
+        }
     }
 
     /**
@@ -66,6 +107,32 @@ class Items
      */
     public function update()
     {
+        try {
+            if (!isset($this->request_body->id)) {
+                $this->http_code = 422;
+                throw new \Exception('id_param_not_found');
+            }
+
+            $item = $this->get_item_by_id($this->request_body->id);
+
+            if (empty($item)) {
+                $this->http_code = 404;
+                throw new \Exception('no_item_was_found');
+            }
+
+            $completed = !(bool) $item->completed;
+            $completed = $completed ? "1" : "0";
+
+            if (!$this->db->submit_query("UPDATE items SET completed=$completed WHERE id={$this->request_body->id}")) {
+                $this->http_code = 500;
+                throw new \Exception('server_error');
+            }
+
+            $this->response_schema['message_code'] = "item_updated";
+        } catch (\Exception $error) {
+            $this->response_schema['success'] = false;
+            $this->response_schema['message_code'] = $error->getMessage();
+        }
     }
 
     /**
@@ -75,5 +142,34 @@ class Items
      */
     public function delete()
     {
+        try {
+            if (!isset($this->request_body->id)) {
+                $this->http_code = 422;
+                throw new \Exception('id_param_not_found');
+            }
+
+            $item = $this->get_item_by_id($this->request_body->id);
+
+            if (empty($item)) {
+                $this->http_code = 404;
+                throw new \Exception('no_item_was_found');
+            }
+
+            if (!$this->db->submit_query("DELETE FROM items WHERE id={$this->request_body->id}")) {
+                $this->http_code = 500;
+                throw new \Exception('server_error');
+            }
+
+            $this->response_schema['message_code'] = "item_deleted";
+        } catch (\Exception $error) {
+            $this->response_schema['success'] = false;
+            $this->response_schema['message_code'] = $error->getMessage();
+        }
+    }
+
+    protected function get_item_by_id($id)
+    {
+        $result = $this->db->submit_query("SELECT * FROM items WHERE id=$id");
+        return $result->fetch_object();
     }
 }
