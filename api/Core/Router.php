@@ -59,6 +59,8 @@ class Router
             // call the method
             call_user_func(array($instence, $class_arr[1]));
         }
+
+        $instence->render();
     }
 
     /**

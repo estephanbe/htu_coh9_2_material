@@ -2,19 +2,52 @@
 
 namespace Core\Controller;
 
+use Core\Database\DB;
+
 /**
  * Manage the todo list items
  */
 class Items
 {
+    protected $db;
+    protected $http_code = 200;
+
+    protected $response_schema = array(
+        "success" => true, // to privde the response status
+        "message_code" => "",
+        "body" => array()
+    );
+
+
     public function __construct()
     {
-        echo "Hi from construct <br>";
+        $this->db = new DB();
     }
 
-    public function index()
+    public function render()
     {
-        echo "hi from index";
+        header("Content-Type: application/json");
+        http_response_code($this->http_code);
+        echo json_encode($this->response_schema);
+    }
+
+    public function index(): void
+    {
+        $items = array();
+        $result = $this->db->submit_query("SELECT * FROM items");
+
+        if ($result->num_rows > 0) {
+            while ($row = $result->fetch_object()) {
+                $items[] = $row;
+            }
+        }
+
+        $this->response_schema['body'] = $items;
+        $this->response_schema['message_code'] = "items_collected";
+    }
+
+    public function single()
+    {
     }
 
     /**
@@ -24,7 +57,6 @@ class Items
      */
     public function create()
     {
-        echo "hi from create";
     }
 
     /**
@@ -34,7 +66,6 @@ class Items
      */
     public function update()
     {
-        echo "hi from update";
     }
 
     /**
@@ -44,6 +75,5 @@ class Items
      */
     public function delete()
     {
-        echo "hi from delete";
     }
 }
