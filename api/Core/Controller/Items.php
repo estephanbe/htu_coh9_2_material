@@ -94,6 +94,7 @@ class Items
             }
 
             $this->response_schema['message_code'] = "item_created";
+            $this->response_schema['body'][] = $this->get_item_by_id($this->db->connection->insert_id);
         } catch (\Exception $error) {
             $this->response_schema['success'] = false;
             $this->response_schema['message_code'] = $error->getMessage();

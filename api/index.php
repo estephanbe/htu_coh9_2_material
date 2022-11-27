@@ -15,7 +15,8 @@ spl_autoload_register(function ($class_name) {
 // $second_router = new FunctionalRouter();
 
 // Defining app routes
-Router::get('/', 'items');
+Router::get('/', 'front');
+
 Router::get('/items', 'items.index');
 Router::get('/items/single', 'items.single');
 Router::post('/items/create', 'items.create');
