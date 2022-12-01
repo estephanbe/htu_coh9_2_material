@@ -1,4 +1,16 @@
 <?php
+
+interface StringInstrument
+{
+    public function change_strings();
+}
+
+interface Rythem
+{
+    public function play_soft();
+}
+
+
 // ========== Abstacts ==============
 
 
@@ -10,8 +22,19 @@ abstract class MusicalInstruments
     abstract public function get_owner_name(): String;
 }
 
-class Piano extends MusicalInstruments
+class Piano extends MusicalInstruments implements StringInstrument, Rythem
 {
+
+    public function change_strings()
+    {
+        echo "done";
+    }
+
+    public function play_soft()
+    {
+        echo 'done';
+    }
+
     public function play_sound()
     {
         echo "do re me!";
